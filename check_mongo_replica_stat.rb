@@ -24,9 +24,8 @@ rescue Exception => e
 end
 
 # there has to be a better way to do this
-data
-  .gsub!(':', '=>')
-  .gsub!('Date', '')
+data.gsub!(':', '=>')
+data.gsub!('Date', '')
 
 
 status = eval(data)
