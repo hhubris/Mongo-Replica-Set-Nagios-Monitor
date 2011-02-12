@@ -19,7 +19,7 @@ begin
   resource = Net::HTTP.new(@options[:host], @options[:port])
   headers,data = resource.get('/replSetGetStatus?text')
 rescue Exception => e
-  puts "Unable to connect to #{host}:#{port} - #{e.message}"
+  puts "ERROR: Unable to connect to #{@options[:host]}:#{@options[:port]} - #{e.message}"
   exit 2
 end
 
