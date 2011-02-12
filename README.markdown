@@ -12,7 +12,7 @@ Create a Nagios command
     define command {
 	    command_name    check-mongo-replica-set
 	    command_line    /usr/lib/nagios/local-plugins/check_mongo_replica_stat.rb
-	    # Note, you can pass --host hostname and --port portnumber as well
+	    # Note, you can pass --host and --port as well
     }
 
 
