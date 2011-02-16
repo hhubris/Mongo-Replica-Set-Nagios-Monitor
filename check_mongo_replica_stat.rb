@@ -57,6 +57,11 @@ status['members'].each do |member|
     rc = 2
   end
 
+  if member['health'] != 1
+    print "ERROR: #{member['name']} health #{member['state']} "
+    rc = 2
+  end
+
   have_master |= (member['state'] == 1)
 end
 
